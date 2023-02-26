@@ -73,13 +73,15 @@ while user_input == '1' or '2' or '3' or '4':
     
     user_input = input('Please make a selection: ')
     print('\n')
-
+    
 #Called each function in the main program loop
+#1 shows your current balance
     if user_input == '1':
        print(f'Your current balance is {balance()}')
        print('\n')
       
 #Allows only numbers for debits and credits 
+#2 allows you to make a debit and shows your remaining balance
     elif user_input == '2':
         try:
             debit_input = float(input('How much would you like to withdraw? '))
@@ -89,7 +91,8 @@ while user_input == '1' or '2' or '3' or '4':
         print('\n')
         print(f'Your current balance is {debit()}')
         print('\n')
-    
+        
+#3 allows you to make a credit and shows your new balance
     elif user_input == '3':
         try:
             deposit_input = float(input('How much is your deposit? '))
@@ -99,14 +102,16 @@ while user_input == '1' or '2' or '3' or '4':
         print('\n')
         print(f'Your current balance is {credit()}')
         print('\n')
-            
+        
+#4 exits the program and issues a thank you message      
     elif user_input == '4':
         print(exit())
         
         break
-
+#If the user selects anything other than 1-4 at the main menu 
+#they will be prompted to select a number 1-4
     else:
         
-        print('Incorrect response, please try again ')
+        print('Incorrect response, please select 1, 2, 3, or 4 ')
         print('\n')
 
